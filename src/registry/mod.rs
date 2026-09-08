@@ -4,6 +4,7 @@ mod kimi_k25;
 mod kimi_k3;
 mod llama4;
 mod llava;
+mod metadata_only;
 mod minimax_m3;
 mod phi3_v;
 mod qwen3_asr;
@@ -27,6 +28,10 @@ use qwen3_vl::Qwen3VLVisionSpec;
 use qwen_vl::QwenVLVisionSpec;
 // Re-export public API from traits.
 pub use deepseek_v41::DEEPSEEK_V41_IMAGE_PLACEHOLDER;
+pub use metadata_only::{
+    EncoderMetadata, MetadataField, MetadataOnlyCodec, MetadataOnlyParser, PreparedEncoderMetadata,
+    PreparedMetadataOnly,
+};
 pub use traits::{
     ModelMetadata, ModelProcessorSpec, ModelRegistryError, RegistryResult, Tokenizer,
 };
